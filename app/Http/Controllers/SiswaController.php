@@ -33,7 +33,14 @@ class SiswaController extends Controller
     	$siswa = \App\Siswa::find($id);
     	$siswa-> delete($siswa);
     	return redirect('/siswa')->with('sukses', 'Data Berhasil Dihapus');
-
-
+    }
+    public function home()
+    {
+        return view('siswa.home');
+    }
+    public function keluarga()
+    {
+        $data_kartu = \App\Kartu::all();
+        return view('siswa.keluarga',['data_kartu'=> $data_kartu]);
     }
 }

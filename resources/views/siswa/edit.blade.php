@@ -19,8 +19,10 @@
               {{session('sukses')}}
             </div>
         @endif
-        <div style="margin-left: 50px; margin-right: 50px; margin-top: 50px;">
-            <h1>Edit Data yang ada</h1>
+        <div style="margin-left: 100px; margin-right: 100px; margin-top: 50px;">
+          <div style="background-color: #FFBF00; width: 100%; padding: 25px; margin-bottom: 20px; color: white;">
+            <h1>Edit Data</h1>
+          </div>
             <form action="/siswa/{{$siswa->id}}/update" method="POST">
                             {{csrf_field()}}
                           <div class="form-group">
